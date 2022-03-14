@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "YlOhaTkGw6Z22QoPGplxS4yUxPjYtDFnGmSIobXLLqcFDbmZsM0s37DDj6+o4XeHGsQ1y7GljkBKf6r9FWoNPg==",
   "success": true,
   "projectFilePath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+=======
+  "dgSpecHash": "eKn6XOa+nMBLk5jevNky+ygf45EJyZ1rQ354ZME3QeSupJ4iZqP9v3B5SP09jYpGkHDidGMfW4I5N3fkzTK3jw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\Petting\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+>>>>>>> 6b7a0a5 (first commit)
   "expectedPackageFiles": [
     "C:\\Users\\Windows\\.nuget\\packages\\entityabstractions\\1.0.0\\entityabstractions.1.0.0.nupkg.sha512",
     "C:\\Users\\Windows\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

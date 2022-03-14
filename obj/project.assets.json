@@ -8589,17 +8589,29 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
       "projectName": "EntityAbstractions.Persistence",
       "projectPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
       "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
       "outputPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Windows\\Documents\\repos\\Meus\\Petting\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+      "projectName": "EntityAbstractions.Persistence",
+      "projectPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\Petting\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+      "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\Petting\\lib\\EntityAbstractions.Persistence\\obj\\",
+>>>>>>> 6b7a0a5 (first commit)
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\NuGet.Config",
+=======
+        "C:\\Users\\Windows\\Documents\\repos\\Meus\\Petting\\lib\\EntityAbstractions.Persistence\\NuGet.Config",
+>>>>>>> 6b7a0a5 (first commit)
         "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
