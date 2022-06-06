@@ -11,7 +11,6 @@ public class Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.UseIdentityColumns();
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Context))!, x => !x.IsAbstract);
     }
 

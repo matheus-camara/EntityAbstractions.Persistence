@@ -9,9 +9,9 @@ public abstract class AuditableEntityMapping<T> : TrackableMapping<T> where T : 
     {
         base.Configure(builder);
 
-        builder.Property(x => x.Created).HasValueGenerator<DateGenerator>();
+        builder.Property(x => x.Created).HasValueGenerator<DateGenerator>().ValueGeneratedOnAdd();
         builder.Property(x => x.CreatedBy);
-        builder.Property(x => x.Modified).HasValueGenerator<DateGenerator>();
+        builder.Property(x => x.Modified).HasValueGenerator<DateGenerator>().ValueGeneratedOnAddOrUpdate();
         builder.Property(x => x.ModifiedBy);
     }
 }
