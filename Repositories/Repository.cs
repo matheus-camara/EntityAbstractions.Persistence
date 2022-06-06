@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 using EntityAbstractions.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityAbstractions.Persistence.Repositories
-{
-    internal abstract class Repository<T> where T : TrackableEntity
+namespace EntityAbstractions.Persistence.Repositories;
+
+public abstract class Repository<T> where T : TrackableEntity
 {
     public Repository(Context context)
     {
@@ -92,5 +88,4 @@ namespace EntityAbstractions.Persistence.Repositories
     {
         return await Query.Where(filter).Skip(skip).Take(take).ToListAsync();
     }
-}
 }

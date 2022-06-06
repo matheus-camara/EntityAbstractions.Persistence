@@ -19,9 +19,7 @@ public class Context : DbContext
     {
         foreach (var entry in ChangeTracker.Entries())
             if (entry is { State: EntityState.Added or EntityState.Modified, Entity: AuditableEntity auditable })
-            {
                 Entry(auditable).Property(x => x.Modified).CurrentValue = DateTime.UtcNow;
-            }
 
         return base.SaveChangesAsync(cancellationToken);
     }

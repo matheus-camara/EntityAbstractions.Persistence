@@ -20,7 +20,7 @@ public class TransactionFilter : IAsyncActionFilter
         ActionExecutionDelegate next)
     {
         var result = await next();
-        if (_notificationContext.HasErrors() || result.Exception == null || result.ExceptionHandled)
+        if (!_notificationContext.HasErrors() || result.Exception == null || result.ExceptionHandled)
             await _DbContext.SaveChangesAsync();
     }
 }
