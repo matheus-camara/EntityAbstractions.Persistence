@@ -1,19 +1,20 @@
-using System.Reflection;
+using EntityAbstractions.Persistence.Contracts;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityAbstractions.Persistence.Contexts;
 
 public class Context : DbContext
 {
-    private readonly Assembly _mappingsAssembly;
-    public Context(DbContextOptions options, Assembly assembly) : base(options)
+    private IMappingAssemblyProvider _assemblyProvider;
+
+    public Context(DbContextOptions options, IMappingAssemblyProvider assemblyProvider) : base(options)
     {
-        _mappingsAssembly = assembly;
+        _assemblyProvider = assemblyProvider;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(_mappingsAssembly, x => !x.IsAbstract);
+        modelBuilder.ApplyConfigurationsFromAssembly(_assemblyProvider.Get(), x => !x.IsAbstract);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
