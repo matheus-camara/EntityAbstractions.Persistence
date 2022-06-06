@@ -5,13 +5,15 @@ namespace EntityAbstractions.Persistence.Contexts;
 
 public class Context : DbContext
 {
-    public Context(DbContextOptions options) : base(options)
+    private readonly Assembly _mappingsAssembly;
+    public Context(DbContextOptions options, Assembly assembly) : base(options)
     {
+        _mappingsAssembly = assembly;
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetAssembly(typeof(Context))!, x => !x.IsAbstract);
+        modelBuilder.ApplyConfigurationsFromAssembly(_mappingsAssembly, x => !x.IsAbstract);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
