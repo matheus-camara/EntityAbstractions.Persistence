@@ -7875,13 +7875,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.3",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+      "projectUniqueName": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
       "projectName": "EntityAbstractions.Persistence",
-      "projectPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+      "projectPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
       "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\obj\\",
+      "outputPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -5,7 +5,7 @@ namespace EntityAbstractions.Persistence.Contexts;
 
 public class Context : DbContext
 {
-    private IMappingAssemblyProvider _assemblyProvider;
+    private readonly IMappingAssemblyProvider _assemblyProvider;
 
     public Context(DbContextOptions options, IMappingAssemblyProvider assemblyProvider) : base(options)
     {

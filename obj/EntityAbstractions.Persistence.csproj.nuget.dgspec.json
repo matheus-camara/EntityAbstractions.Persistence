@@ -5,7 +5,7 @@
   },
   "projects": {
     "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
         "projectName": "EntityAbstractions.Persistence",

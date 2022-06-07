@@ -5,12 +5,15 @@ namespace EntityAbstractions.Persistence.Mappings;
 
 public class MappingAssemblyProvider : IMappingAssemblyProvider
 {
-    private Assembly _assembly;
+    private readonly Assembly _assembly;
 
     public MappingAssemblyProvider(Assembly assembly)
     {
         _assembly = assembly;
     }
 
-    public virtual Assembly Get() => _assembly;
+    public virtual Assembly Get()
+    {
+        return _assembly;
+    }
 }

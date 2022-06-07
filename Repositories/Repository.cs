@@ -20,9 +20,9 @@ public abstract class Repository<T> where T : TrackableEntity
         DbSet.Update(entity);
     }
 
-    public virtual async Task SaveAsync()
+    public virtual async Task SaveAsync(CancellationToken token = default)
     {
-        await Context.SaveChangesAsync();
+        await Context.SaveChangesAsync(token);
     }
 
     public virtual void Delete(T Entity)
@@ -30,62 +30,81 @@ public abstract class Repository<T> where T : TrackableEntity
         DbSet.Remove(Entity);
     }
 
-    public virtual async Task<long> CountAsync()
+    public virtual async Task<long> CountAsync(CancellationToken token = default)
     {
-        return await Query.LongCountAsync();
+        return await Query.LongCountAsync(token);
     }
 
-    public virtual async Task<T?> FindAsync(Expression<Func<T, bool>> predicate)
+    public virtual async Task<T?> FindAsync(Expression<Func<T, bool>> predicate, CancellationToken token = default)
     {
-        return await DbSet.FirstOrDefaultAsync(predicate);
+        return await DbSet.FirstOrDefaultAsync(predicate, token);
     }
 
-    public virtual async ValueTask<T?> FindAsync(Guid key)
+    public virtual async ValueTask<T?> FindAsync(Guid key, CancellationToken token = default)
     {
-        return await DbSet.FindAsync(key);
+        return await DbSet.FindAsync(key, token);
     }
 
-    public virtual async Task<TResult?> FindAsync<TResult>(Expression<Func<T, bool>> filter,
-        Expression<Func<T, TResult>> projection)
+    public virtual async Task<TResult?> FindAsync<TResult>(
+        Expression<Func<T, bool>> filter,
+        Expression<Func<T, TResult>> projection,
+        CancellationToken token = default)
     {
-        return await Query.Where(filter).Select(projection).SingleOrDefaultAsync();
+        return await Query.Where(filter).Select(projection).SingleOrDefaultAsync(token);
     }
 
-    public virtual async Task<IList<T>> GetAsync(Expression<Func<T, bool>> filter)
+    public virtual async Task<IList<T>> GetAsync(
+        Expression<Func<T, bool>> filter,
+        CancellationToken token = default)
     {
-        return await Query.Where(filter).ToListAsync();
+        return await Query.Where(filter).ToListAsync(token);
     }
 
-    public virtual async Task<IList<TResult>> GetAsync<TResult>(Expression<Func<T, TResult>> projection)
+    public virtual async Task<IList<TResult>> GetAsync<TResult>(
+        Expression<Func<T, TResult>> projection,
+        CancellationToken token = default)
     {
-        return await Query.Select(projection).ToListAsync();
+        return await Query.Select(projection).ToListAsync(token);
     }
 
-    public virtual async Task<IList<TResult>> GetAsync<TResult>(Expression<Func<T, bool>> filter,
-        Expression<Func<T, TResult>> projection)
+    public virtual async Task<IList<TResult>> GetAsync<TResult>(
+        Expression<Func<T, bool>> filter,
+        Expression<Func<T, TResult>> projection,
+        CancellationToken token = default)
     {
-        return await Query.Where(filter).Select(projection).ToListAsync();
+        return await Query.Where(filter).Select(projection).ToListAsync(token);
     }
 
-    public virtual async Task<IList<TResult>> GetAsync<TResult>(int skip, int take,
-        Expression<Func<T, TResult>> projection)
+    public virtual async Task<IList<TResult>> GetAsync<TResult>(
+        int skip,
+        int take,
+        Expression<Func<T, TResult>> projection,
+        CancellationToken token = default)
     {
-        return await Query.Skip(skip).Take(take).Select(projection).ToListAsync();
+        return await Query.Skip(skip).Take(take).Select(projection).ToListAsync(token);
     }
 
-    public virtual async Task<IList<TResult>> GetAsync<TResult>(int skip, int take, Expression<Func<T, bool>> filter,
-        Expression<Func<T, TResult>> projection)
+    public virtual async Task<IList<TResult>> GetAsync<TResult>(
+        int skip,
+        int take,
+        Expression<Func<T, bool>> filter,
+        Expression<Func<T, TResult>> projection,
+        CancellationToken token = default)
     {
-        return await Query.Where(filter).Skip(skip).Take(take).Select(projection).ToListAsync();
+        return await Query.Where(filter).Skip(skip).Take(take).Select(projection).ToListAsync(token);
     }
 
-    public virtual async Task<IList<T>> GetAsync(int skip, int take)
+    public virtual async Task<IList<T>> GetAsync(int skip, int take, CancellationToken token = default)
     {
-        return await Query.Skip(skip).Take(take).ToListAsync();
+        return await Query.Skip(skip).Take(take).ToListAsync(token);
     }
 
-    public virtual async Task<IList<T>> GetAsync(int skip, int take, Expression<Func<T, bool>> filter)
+    public virtual async Task<IList<T>> GetAsync(
+        int skip,
+        int take,
+        Expression<Func<T, bool>> filter,
+        CancellationToken token = default)
     {
-        return await Query.Where(filter).Skip(skip).Take(take).ToListAsync();
+        return await Query.Where(filter).Skip(skip).Take(take).ToListAsync(token);
     }
 }
