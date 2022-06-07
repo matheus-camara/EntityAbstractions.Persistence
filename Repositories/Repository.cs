@@ -1,17 +1,16 @@
 using System.Linq.Expressions;
-using EntityAbstractions.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityAbstractions.Persistence.Repositories;
 
 public abstract class Repository<T> where T : TrackableEntity
 {
-    public Repository(Context context)
+    public Repository(DbContext context)
     {
         Context = context;
     }
 
-    private Context Context { get; }
+    private DbContext Context { get; }
     public DbSet<T> DbSet => Context.Set<T>();
     public IQueryable<T> Query => DbSet.AsNoTracking();
 

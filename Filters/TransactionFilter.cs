@@ -1,15 +1,15 @@
-using EntityAbstractions.Persistence.Contexts;
 using EntityAbstractions.Persistence.Interfaces;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityAbstractions.Persistence.Filters;
 
 public class TransactionFilter : IAsyncActionFilter
 {
-    private readonly Context _DbContext;
+    private readonly DbContext _DbContext;
     private readonly IErrorContext _notificationContext;
 
-    public TransactionFilter(Context dbContext, IErrorContext notificationContext)
+    public TransactionFilter(DbContext dbContext, IErrorContext notificationContext)
     {
         _DbContext = dbContext;
         _notificationContext = notificationContext;
