@@ -14,7 +14,12 @@ public abstract class Repository<T> where T : TrackableEntity
     public DbSet<T> DbSet => Context.Set<T>();
     public IQueryable<T> Query => DbSet.AsNoTracking();
 
-    public virtual void AddOrUpdate(T entity)
+    public virtual async Task AddAsync(T entity)
+    {
+        await DbSet.AddAsync(entity);
+    }
+
+    public virtual void Update(T entity)
     {
         DbSet.Update(entity);
     }
@@ -41,7 +46,7 @@ public abstract class Repository<T> where T : TrackableEntity
 
     public virtual async ValueTask<T?> FindAsync(Guid key, CancellationToken token = default)
     {
-        return await DbSet.FindAsync(key, token);
+        return await DbSet.FindAsync(new object?[] { key }, token);
     }
 
     public virtual async Task<TResult?> FindAsync<TResult>(
