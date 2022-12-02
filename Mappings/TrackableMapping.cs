@@ -13,7 +13,6 @@ public abstract class TrackableMapping<T> : IEntityTypeConfiguration<T> where T 
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)
-            .HasValueGenerator<GuidValueGenerator>()
             .ValueGeneratedOnAdd();
     }
 }

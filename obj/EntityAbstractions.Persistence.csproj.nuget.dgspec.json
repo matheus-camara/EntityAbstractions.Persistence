@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj": {}
+    "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj": {
-      "version": "1.0.5",
+    "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj": {
+      "version": "1.0.8",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
         "projectName": "EntityAbstractions.Persistence",
-        "projectPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
+        "projectPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\EntityAbstractions.Persistence.csproj",
         "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Windows\\Documents\\repos\\Meus\\lib\\EntityAbstractions.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,15 +21,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -40,12 +40,12 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "EntityAbstractions": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.4, )"
             },
             "Microsoft.AspNetCore.Mvc": {
               "target": "Package",
@@ -53,11 +53,11 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -66,7 +66,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -75,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

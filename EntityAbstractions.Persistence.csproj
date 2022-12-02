@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageId>EntityAbstractions.Persistence</PackageId>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <Authors>Matheus Câmara</Authors>
     <Company>Petting</Company>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EntityAbstractions" Version="1.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="EntityAbstractions" Version="1.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
